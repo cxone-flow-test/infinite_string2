@@ -1,10 +1,10 @@
 #ifndef __INFINITE_STR_H__
 #define __INFINITE_STR_H__
 
-#ifdef SHARED
-  #define ATTR __attribute__((visibility("default")))
-#else
+#ifndef SHARED
   #define ATTR 
+#else
+  #define ATTR __attribute__((visibility("default")))
 #endif
 
 
